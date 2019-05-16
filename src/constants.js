@@ -1,0 +1,1 @@
+export const LS_MESSAGES_KEY = 'LS_MESSAGES_KEY'
