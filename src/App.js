@@ -3,7 +3,7 @@ import uuidv1 from 'uuid/v1'
 import useLocalStorage from './useLocalStorage'
 import useReadingLocalStorage from './readingLocalStorage'
 
-function App() {
+function App () {
   const [messageState, setMessageState] = useState('')
 
   const us = useReadingLocalStorage()
