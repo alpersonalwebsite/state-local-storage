@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 import uuidv1 from 'uuid/v1'
 import useLocalStorage from './useLocalStorage'
-import useReadingLocalStorage from './readingLocalStorage'
+import readingLocalStorage from './readingLocalStorage'
 
 function App () {
   const [messageState, setMessageState] = useState('')
 
-  const us = useReadingLocalStorage()
+  const messagesInLS = readingLocalStorage()
 
-  console.log('readingLocalStorage', us)
-
-  const [messagesState, setMessagesState] = useState(us)
+  const [messagesState, setMessagesState] = useState(messagesInLS)
   useLocalStorage(messagesState)
 
   const onChangeInputMessageHandler = (e) => {
@@ -19,6 +17,7 @@ function App () {
 
   const onSubmitHandler = (e) => {
     e.preventDefault()
+    setMessageState('')
     addMessage(e)
   }
 
@@ -36,7 +35,6 @@ function App () {
         <input value={messageState} onChange={onChangeInputMessageHandler} />
         <button>Add!</button>
       </form>
-
       <ul>
         {messageList}
       </ul>
