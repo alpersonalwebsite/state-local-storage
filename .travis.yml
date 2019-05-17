@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- node
+sudo: false
+install: yarn install
+script:
+- "yarn run lint"
+- echo "skipping tests"
+deploy:
+  provider: heroku
+  api_key:
+    secure: "z7WgMO0GGJ0ZEBBgv65FTRI7X43KOKtoQI1o2XT7FH2PSWjNGXiMtvu2+tpg1aU/zn739lyO3ocfC7tuaRFvHmOIOUe/YalxXH5WQ2JMxTQ5k80varJhcZ9PM235AMaR86CzXr/827Aprt9dSb5ZuwmZWcOuLi9ivXS/gHlk37Y6QCeGhfbVIfP8jSZBK/BuJvP5N2j6rKy1Dz0WG6mY9BML3YnDu1PR23bfujW/nw1D/34/82HyG2q1oFL+1vRObstJcOk8PUPuLZGizkJD04tRuGFOUoq45BFPIvqceJtAdy2hIN03z9SBJKYi6iUqtarSE1eXpeDrI7gjpJx6xLCX1RGOL73uuQpSZspZbFqJtubXk7imrjPIiNep8oyQvaaA4tXoefo4LCr8rJqWSdf5JwOaOpRJG7p+BJiygm5EVGZQ1Dmv4qu2KaR5yEdn8FBtUICPOrdD9433b7lgl3baY+8T655i3ZAb2PO+oiwCTcSt6vvgFL0jEW+HcazXUwb29JoKREtHSCO79QY31LShGT0pMGUwYQhgCBh9SQ3p8Dhg722oV+bL3vBVoiDCEfYtDIfvGdl+6KPGSrf5bjfvTgHcBwamAJKGAf/A/DInHqtuao/8vr5cVUWlyYR0uNy/AvKnygyrXgfy0yZru9WP610w+M5y1D/VqZc7lrE="
+  app: state-local-storage
+  on:
+    repo: alpersonalwebsite/state-local-storage
