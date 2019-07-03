@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/alpersonalwebsite/react-state-local-storage.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.com/alpersonalwebsite/react-state-local-storage.svg?branch=master)](https://travis-ci.com/alpersonalwebsite/react-state-local-storage)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 This is an easy, basic and raw (no styles attached) example of HOW to interact with the `Storage` interface of the `Web Storage API`.
 
