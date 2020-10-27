@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { LS_MESSAGES_KEY } from './constants'
 
-const useLocalStorage = (messagesValues) => {
+const useLocalStorage = messagesValues => {
   useEffect(() => {
     const beforeUnloadHanlder = () => {
       localStorage.setItem(LS_MESSAGES_KEY, JSON.stringify(messagesValues))
