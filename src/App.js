@@ -44,8 +44,8 @@ function App() {
   return (
     <React.Fragment>
       <form onSubmit={onSubmitHandler}>
-        <label> Add a message: </label> <input value={messageState} onChange={onChangeInputMessageHandler} />{' '}
-        <button> Add! </button>{' '}
+        <label htmlFor="message"> Add a message: </label>{' '}
+        <input name="message" value={messageState} onChange={onChangeInputMessageHandler} /> <button> Add! </button>{' '}
       </form>{' '}
       <ul> {messageList} </ul> <hr />
       <button onClick={deleteKeyFromLS}> Clear All! </button>{' '}
